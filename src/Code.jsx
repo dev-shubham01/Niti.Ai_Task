@@ -89,20 +89,7 @@ const Carousel = () => {
   const [isTick, setisTick] = useState(false);
   const [activeIdx, setActiveIdx] = useState(0);
   const maxLength = items.length;
-//    const getData=()=>{
-//     fetch("data.json",{headers:{
-//         'Content-Type':'application/json',
-//         'Accept':'application/json'
-//     }
-// }).then((response)=>{
-//     return response.json()
-// }).then(data=>{
-//     console.log(data,"data");
-// })
-//    }
-//    useEffect(()=>{
-//     getData()
-//    },[])
+
   const prev = (jump = 1) => {
     if (!isTick) {
       setisTick(true);
@@ -111,6 +98,8 @@ const Carousel = () => {
       });
     }
   };
+  
+   
 
   const next = (jump = 1) => {
     if (!isTick) {
